@@ -10,13 +10,13 @@ display_logo_centered("swatchme_logo.png", width=160)
 st.markdown("<h1 style='text-align: center;'>Soft & Blended Palette</h1>", unsafe_allow_html=True)
 
 # Load marker data
-df = pd.read_csv("marker_data.csv")
+df = pd.read_csv("../marker_data.csv")
 df.columns = df.columns.str.strip().str.lower()  # Normalize columns
 
 st.write("Columns in CSV:", df.columns.tolist())
 df = pd.read_csv("marker_data.csv")
 st.write("Raw CSV:", df)
-st.write("File exists?", os.path.exists("marker_data.csv"))
+st.write("File exists?", os.path.exists("../marker_data.csv"))
 
 # User selections
 marker_set = st.selectbox("Choose a marker set", df["set"].unique())
