@@ -12,7 +12,7 @@ st.markdown("<h1 style='text-align: center;'>Soft & Blended Palette</h1>", unsaf
 df = pd.read_csv("marker_data.csv")
 
 # User selections
-marker_set = st.selectbox("Choose a marker set", df["Set"].unique())
+marker_set = st.selectbox("Choose a marker set", df["set"].unique())
 filtered_df = df[df["Set"] == marker_set]
 
 num_colors = st.slider("Number of colors", 3, 10, 5)
