@@ -57,6 +57,7 @@ for tool in tools:
                 <strong>{tool['title']}</strong><br>
                 <span>{tool['desc']}</span>
             </div>
+            <a class='tool-link' href='/{tool["page"]}' target='_self'>→</a>
         </div>
     """, unsafe_allow_html=True)
 # Bottom navigation bar
