@@ -24,8 +24,8 @@ if st.button("🎨 Generate Palette"):
         st.markdown(
             f"""
             <div style='display: inline-block; margin-right: 12px; text-align: center;'>
-                <div style='width: 60px; height: 60px; border-radius: 12px; background-color: {row["Hex"]}; border: 1px solid #ccc;'></div>
-                <div style='margin-top: 6px;'>{row["Code"]}</div>
+                <div style='width: 60px; height: 60px; border-radius: 12px; background-color: {row["hex"]}; border: 1px solid #ccc;'></div>
+                <div style='margin-top: 6px;'>{row["code"]}</div>
             </div>
             """, unsafe_allow_html=True
         )
