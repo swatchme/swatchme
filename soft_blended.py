@@ -2,6 +2,7 @@ import streamlit as st
 from utils import display_logo_centered
 import pandas as pd
 import random
+import os
 
 # Display logo
 display_logo_centered("swatchme_logo.png", width=160)
@@ -13,6 +14,9 @@ df = pd.read_csv("marker_data.csv")
 df.columns = df.columns.str.strip().str.lower()  # Normalize columns
 
 st.write("Columns in CSV:", df.columns.tolist())
+df = pd.read_csv("marker_data.csv")
+st.write("Raw CSV:", df)
+st.write("File exists?", os.path.exists("marker_data.csv"))
 
 # User selections
 marker_set = st.selectbox("Choose a marker set", df["set"].unique())
