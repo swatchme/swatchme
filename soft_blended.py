@@ -12,6 +12,8 @@ st.markdown("<h1 style='text-align: center;'>Soft & Blended Palette</h1>", unsaf
 df = pd.read_csv("marker_data.csv")
 df.columns = df.columns.str.strip().str.lower()  # Normalize columns
 
+st.write("Columns in CSV:", df.columns.tolist())
+
 # User selections
 marker_set = st.selectbox("Choose a marker set", df["set"].unique())
 filtered_df = df[df["set"] == marker_set]
