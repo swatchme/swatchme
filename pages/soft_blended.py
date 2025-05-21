@@ -13,7 +13,7 @@ df = pd.read_csv("marker_data.csv")
 
 # User selections
 marker_set = st.selectbox("Choose a marker set", df["set"].unique())
-filtered_df = df[df["Set"] == marker_set]
+filtered_df = df[df["set"] == marker_set]
 
 num_colors = st.slider("Number of colors", 3, 10, 5)
 
