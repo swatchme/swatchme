@@ -10,6 +10,7 @@ st.markdown("<h1 style='text-align: center;'>Soft & Blended Palette</h1>", unsaf
 
 # Load marker data
 df = pd.read_csv("marker_data.csv")
+df.columns = df.columns.str.strip().str.lower()  # Normalize columns
 
 # User selections
 marker_set = st.selectbox("Choose a marker set", df["set"].unique())
